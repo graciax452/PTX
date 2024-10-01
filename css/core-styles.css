@@ -4,97 +4,128 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #853A3A;
-    --primaryLight: #001F3F;
-    --secondary: #E4A95F;
-    --secondaryLight: #FFBA43;
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #820010;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #4E4B66;
-    --bodyTextColorWhite: #FAFBFC;
+    --bodyTextColor: #292929;
+    --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-  }
-  /* roboto-regular - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-regular.woff') format('woff');
-    
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-700 - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-700.woff') format('woff');
-    
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-900 - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-900.woff') format('woff');
-    
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  body,
-  html {
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 3rem;
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/assets/fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-regular.woff') format('woff');
+  
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('/assets/fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-700.woff') format('woff');
+  
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''), url('/assets/fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-900.woff') format('woff');
+  
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
     margin: 0;
     padding: 0;
     font-size: 100%;
     font-family: 'Roboto', Arial, sans-serif;
     color: var(--bodyTextColor);
     overflow-x: hidden;
-  }
-  *,
-  *:before,
-  *:after {
+    background-color: #f0f0f0; /* Replace this with any color code */
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
-    transition: background-color 0.3s;
-  }
-  .container {
-    position: relative;
-    width: 92%;
-    margin: auto;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-    color: var(--headerColor);
-  }
-  p,
-  li,
-  a {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0;
-  }
-  p,
-  li {
-    color: var(--bodyTextColor);
-  }
-  a:hover,
-  button:hover {
-    cursor: pointer;
-  }
-  .cs-topper {
+}
+body {
+  transition: background-color 0.3s;
+}
+
+.container {
+  position: relative;
+  width: 92%;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--headerColor);
+}
+p,
+li,
+a {
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin: 0;
+}
+p,
+li {
+  color: var(--bodyTextColor);
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* Specific styles for each heading */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Min: 2.5rem, Responsive: 5vw, Max: 3.5rem */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Min: 2rem, Responsive: 4.5vw, Max: 3rem */
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem); /* Min: 1.75rem, Responsive: 4vw, Max: 2.5rem */
+  letter-spacing: 1.2px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem); /* Min: 1.5rem, Responsive: 3.5vw, Max: 2rem */
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     text-transform: uppercase;
@@ -102,31 +133,44 @@
     letter-spacing: .1em;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: (4/16rem);
     display: block;
-  }
-  body.dark-mode .cs-topper {
-    color: var(--secondary);
-  }
-  .cs-title {
-    font-size: var(--headerFontSize);
+}
+
+body.dark-mode .cs-topper {
+  color: var(--secondary);
+}
+
+.cs-title {
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
+    max-width: (700/16rem);
+    margin: 0 0 (16/16rem) 0;
     color: var(--headerColor);
     position: relative;
-  }
-  .cs-text {
+}
+.mini-title {
+  font-weight: 400;
+  line-height: 1em;
+  text-align: inherit;
+  max-width: (700/16rem);
+  margin: 0 0 (16/16rem) 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
     width: 100%;
-    max-width: 40.625rem;
+    max-width: (650/16rem);
     margin: 0;
     color: var(--bodyTextColor);
-  }
+}
+                            
+                            
   .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
